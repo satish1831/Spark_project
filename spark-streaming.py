@@ -59,7 +59,7 @@ add_total_cost = udf(total_cost, FloatType())
 raw_stream = spark \
     .readStream \
     .format("kafka") \
-    .option("kafka.bootstrap.servers","18.211.252.152:9092") \
+    .option("kafka.bootstrap.servers","kafka_server") \
     .option("subscribe","real-time-project") \
     .option("startingOffsets", "latest")  \
     .load()
